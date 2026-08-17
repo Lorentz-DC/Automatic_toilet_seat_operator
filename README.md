@@ -83,8 +83,8 @@ https://youtu.be/PDNIiLSTzG4?si=cXLuie5WhYatIrrd
 ![3D printed potentiometer GT2 gear set](gearset.png)
 the Autodesk Fusion files can be found in the main repository: 
 
-![](Potentiometer_Gear_Update_Jul08.f3d)  
-![](Main_Gear_update_Jul08.f3d)
+![potentiometer gear](Potentiometer_Gear_Update_Jul08.f3d)  
+![main gear](Main_Gear_update_Jul08.f3d)
 
 **Voltage Control and Current Protection:**
 
