@@ -4,7 +4,7 @@ A toggle-activated rotating armature system to raise up and close either the top
 
 Load test demostration:
 
-![load_test](media/load_test.gif)
+![load_test](load_test.gif)
 
 load testing video with explaination on youtube: https://youtu.be/TG4GU5XdJvA?si=c8EunXvwlVA2-hOE
 
@@ -50,7 +50,7 @@ Sequence of movement:
 
 Demonstration of movement logic of the armature:
 
-![armature demo](media/arm_test.gif)
+![armature demo](arm_test.gif)
 
 YouTube video link: https://youtu.be/BwDyFDnwye8?si=BkIoQYhQGPaKe0z8
 
