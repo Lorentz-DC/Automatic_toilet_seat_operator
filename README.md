@@ -1,8 +1,8 @@
 ![project cover:](project_cover.jpg)
 # Automatic_toilet_seat_operator
-A toggle-activated rotating armature system to raise up and close either the top or both toilet seats. The armature is driven by a car wiper motor and a servo, while the system runs on Arduino code with positional IR sensors. d 
+A toggle-activated rotating armature system to raise up and close either the top or both toilet seats. The armature is driven by a car wiper motor and a servo, while the system runs on Arduino code with positional IR sensors. 
 
-[Watch the Load Testing Video](https://youtu.be/TG4GU5XdJvA?si=c8EunXvwlVA2-hOE)
+Watch the Load Testing Video here: $ https://youtu.be/TG4GU5XdJvA?si=c8EunXvwlVA2-hOE $
 *Click the link above to watch the load testing video on YouTube.*
 
 **Introduction:**
@@ -26,8 +26,8 @@ Wiring Diagram:
 **Relay and Motor Wiring:**
 
 2-relay H-Bridge: I used a 2-relay configuration from a 4-channel module, wiring the motor leads directly to the Common (COM) terminals. This design Electrical Interlock: Normally Closed (NC) pins connect to system Ground, and Normally Open (NO) pins tie to the positive DC motor supply line. This physical wiring layout makes it structurally impossible to create a direct short-circuit across the DC power supply, regardless of code errors. 
-
 Relay wiring diagram:
+
 ![Relay wiring diagram:](relay_diagram.PNG)
 
 
@@ -44,7 +44,7 @@ The software is organized into three clean layers that split reading sensors, de
 Code logic flowchart
 ![Code logic flowchart:](code_flowchart.png)
 
-![Watch the armature testing Video](https://youtu.be/BwDyFDnwye8?si=BkIoQYhQGPaKe0z8)
+Watch the armature testing Video here: $ https://youtu.be/BwDyFDnwye8?si=BkIoQYhQGPaKe0z8) $
 *Click the link above to watch the armature movement sequence on YouTube.*
 
 **Additional Features:**
