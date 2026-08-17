@@ -40,13 +40,13 @@ Relay wiring diagram:
 
 **Armature Movement:**
 
-Demonstration of movement logic of the armature:
 Sequence of movement:
 1. lifting up only the top lid;
 2. Reverse to push lid down;
 3. lifting up both lids by activating the servo and extending the arm;
 4. Reverse to push both lids down.
-   
+Demonstration of movement logic of the armature:
+
 ![armature demo](arm_test.gif)
 
 YouTube video link: https://youtu.be/BwDyFDnwye8?si=BkIoQYhQGPaKe0z8
