@@ -1,10 +1,10 @@
-![project cover:](project_cover.jpg)
+![project cover:](media/project_cover.jpg)
 # Automatic_toilet_seat_operator
 A toggle-activated rotating armature system to raise up and close either the top or both toilet seats. The armature is driven by a car wiper motor and a servo, while the system runs on Arduino code with IR sensors to limit its positions during rotation. 
 
 Load test demostration:
 
-![load_test](load_test.gif)
+![load_test](media/load_test.gif)
 
 load testing video with explaination on youtube: https://youtu.be/TG4GU5XdJvA?si=c8EunXvwlVA2-hOE
 
@@ -17,7 +17,7 @@ The main idea of the design is that when activated, the armature will catch the 
 With this said, the current version of the code logic works best on a slow closing toilet seat, since otherwise for a set of free closing toilet seat, the lids will slam loudly every time they are pushed back down. 
 
 Hardware View:
-![Hardware View:](hardware_setup.jpg)
+![Hardware View:](media/hardware_setup.jpg)
  
 **Main Components:**
 
@@ -50,7 +50,7 @@ Sequence of movement:
 
 Demonstration of movement logic of the armature:
 
-![armature demo](arm_test.gif)
+![armature demo](media/arm_test.gif)
 
 YouTube video link: https://youtu.be/BwDyFDnwye8?si=BkIoQYhQGPaKe0z8
 
@@ -80,7 +80,7 @@ the main reference for my Fusion design is as follows:
 https://youtu.be/PDNIiLSTzG4?si=cXLuie5WhYatIrrd  
 
 3D printed potentiometer GT2 gear set:
-![3D printed potentiometer GT2 gear set](gearset.png)
+![3D printed potentiometer GT2 gear set](media/gearset.png)
 the Autodesk Fusion files can be found in the main repository: 
 
 ![potentiometer gear](Potentiometer_Gear_Update_Jul08.f3d)  
@@ -93,7 +93,7 @@ Step-down buck converter with CV and CC control (optional): controls main arm mo
 TVS diodes: soldered Transient Voltage suppression diodes across relay terminals for voltage spike protection on the motor side.
 
 Relay protection:
-![Relay protection](relay_protection.jpg)
+![Relay protection](media/relay_protection.jpg)
 
 **Upcoming bathroom Installation:**
 
