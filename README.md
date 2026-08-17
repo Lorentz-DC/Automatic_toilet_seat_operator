@@ -70,6 +70,8 @@ Code logic flowchart
 
 **Additional Features:**
 
+**Rotation tracking with potentiometer and 3D-printed GT2 sear set**
+
 While the IR sensors are sufficient to limit arm rotation, I added a redundancy rotation tracking system with a potentiometer and GT2 gear-belt set, where the main arm gear is coupled around the motor shaft, and the potentiometer gear sits on the potentiometer above. When the main arm rotates, the potentiometer will have a 1-1 ratio rotation, and the Arduino will pick up its analog reading (0-1023) and map on to the rotation angle. However this system is not very accurate and prone to gradual slippage, so I've not incorporated it into the main program. 
 
 the main reference for my Fusion design is as follows: 
@@ -77,6 +79,10 @@ https://youtu.be/PDNIiLSTzG4?si=cXLuie5WhYatIrrd
 
 3D printed potentiometer GT2 gear set:
 ![3D printed potentiometer GT2 gear set](gearset.png)
+the Autodesk Fusion files can be found in the main repository: 
+
+![](Potentiometer_Gear_Update_Jul08.f3d)  
+![](Main_Gear_update_Jul08.f3d)
 
 **Voltage Control and Current Protection:**
 
@@ -98,4 +104,5 @@ Adding a touchless motion sensor relay switch to switch on and off the system up
 Environment-proofing, wiring and electrical safety; 
 
 Slotted L brackets for position calibration (front-back, up-down, left-right); 
+
 Convincing my gf to actually put it next to the toilet, which would perhaps, be the ultimate challenge. 
