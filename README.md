@@ -3,7 +3,7 @@
 A toggle-activated rotating armature system to raise up and close either the top or both toilet seats. The armature is driven by a car wiper motor and a servo, while the system runs on Arduino code with positional IR sensors. 
 ![load_test](load_test.gif)
 
-Watch the load testing video on youtube: https://youtu.be/TG4GU5XdJvA?si=c8EunXvwlVA2-hOE
+load testing video with explaination on youtube: https://youtu.be/TG4GU5XdJvA?si=c8EunXvwlVA2-hOE
 
 **Introduction:**
 
@@ -31,6 +31,12 @@ Relay wiring diagram:
 
 ![Relay wiring diagram:](relay_diagram.PNG)
 
+**Armature Movement**
+Demonstration of movement logic of the armature:
+
+![armature demo](arm_test.gif)
+
+YouTube video link: https://youtu.be/BwDyFDnwye8?si=BkIoQYhQGPaKe0z8
 
 **Arduino Code Structure:**
 
@@ -41,11 +47,9 @@ The software is organized into three clean layers that split reading sensors, de
 1. Sensor & Button Inputs (Modular Functions): Functions like IR_Sensors(), Limit_Switch(), and the button controllers run continuously on every loop cycle. They read input data, and translate button presses into simple internal request flags. 
 2. Brain & Decision Engine (Switch-Case Structure):The core logic uses a clean switch-case state machine. It handles one step at a time (like HOME, LATCHING, or LIFTING) and  blocks out the other states. Instead of turning on pins directly, this section only updates internal state-flag variables to map out the desired direction. 
 3. Motor Driver (Main Loop Activation):Physical relay pins are only permitted to switch at the very end of the main loop(). This dedicated output block acts as a gatekeeper: it checks key state-flag motion variables (e.g: clockwise_direction_state, motion_activate, and servo_liftdown) and executes the final movement on the armature.
-   
+
 Code logic flowchart
 ![Code logic flowchart:](code_flowchart.png)
-
-Watch the armature testing video on youtube: https://youtu.be/BwDyFDnwye8?si=BkIoQYhQGPaKe0z8
 
 **Additional Features:**
 
