@@ -1,4 +1,4 @@
-![project cover:](project_cover.png)
+![project cover:](project_cover.jpg)
 # Automatic_toilet_seat_operator
 A toggle-activated rotating armature system to raise up and close either the top or both toilet seats. The armature is driven by a car wiper motor and a servo, while the system runs on Arduino code with positional IR sensors. d 
 
