@@ -26,7 +26,7 @@ The main wiper motor is activated by a 2-relay system powered by a 12V 2A DC sou
 The mechanism is controlled by 3 toggle buttons: Button 1 raise the top lid. Button 2 latches the small arm down with the servo, extending the main arm, and then the main arm lifts up both lids. Button 3: reverses the main arm to push the lids back down. 
 
 The rotating arm tells its position by two IR sensors: bottom IR sensor for homing position, and a top IR sensor for when the arm reaches to about 90 degree zenith of rotation. On initial start up, the system will detect if the arm is resting at home position to allow inputs, if not, the system will enter a float warming state and a manual reset is required to bring the armature back to homing position. 
-There is also a rotation tracking system featuring a set gears with a timing belt coupled to the motor shaft and to a potentiometer, however, this is a optional redundancy system added for extra safety. 
+There is also a rotation tracking system featuring a set gears with a timing belt coupled to the motor shaft and to a potentiometer, however, this is an optional redundancy system added for extra safety. 
 
 Due to the design, the servo motor casing cannot allow the armature to rotate freely the full 360 degree. For safety, a limit switch is placed in the path of the servo casing, and will stop all system movements if activated. In this case, a float state warning will also activate demanding manual reset. I've had a unfortunate test incident where my faulty code failed to activate the limit switch and the servo casing hit the wood block, as it was at the time running on a 12V 15A DC source, there was so much torque that the plastic servo casing got ripped right off the aluminum arm. 
 
