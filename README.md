@@ -69,7 +69,7 @@ The software is organized into three clean layers that split reading sensors, de
 3. Motor Driver (Main Loop Activation):Physical relay pins are only permitted to switch at the very end of the main loop(). This dedicated output block acts as a gatekeeper: it checks key state-flag motion variables (e.g: clockwise_direction_state, motion_activate, and servo_liftdown) and executes the final movement on the armature.
 
 Code logic flowchart
-![Code logic flowchart:](code_flowchart.png)
+![Code logic flowchart:](code_flowchart.jpeg)
 
 **Additional Features:**
 
