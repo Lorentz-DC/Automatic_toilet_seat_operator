@@ -1,4 +1,4 @@
-![project cover](cover.png)
+![project cover:](project_cover.png)
 # Automatic_toilet_seat_operator
 A toggle-activated rotating armature system to raise up and close either the top or both toilet seats. The armature is driven by a car wiper motor and a servo, while the system runs on Arduino code with positional IR sensors. d 
 
@@ -8,7 +8,7 @@ A toggle-activated rotating armature system to raise up and close either the top
 **Introduction: **
 As a guy living with my girlfriend and her cat, I really don't like touching the toilet lids every time I am asked to put the seats down. So I built a automatic toilet seat operator, featuring a set of rotating aluminum armature with a car wiper motor driving the main arm, and a servo motor bolted to the end of the main arm driving a smaller arm. 
 The main idea of the design is that when activated, the armature will catch the bolts attached to the toilet lids, and lift up either the top lid or both of the lids, and then push the lids back down. When the main arm alone rotates in clockwise direction, it will only catch the bolt on the upper lid and lift it up; When the servo motor spins down the smaller arm, the main armature will be extended to reach and catch the front bolt of the bottom lid; Therefore, when the arm lifts, both of the lids will be lifted. To lower the seats, the armature simply rotates in reverse to push the lids over, after which they will fall back down themselves. With this said, the current version of the code logic works best on a slow closing toilet seat, since otherwise for a set of free closing toilet seat, the lids will slam loudly every time they are pushed back down. 
-![Hardware View: ](hardware_setup.jpg)
+![Hardware View:](hardware_setup.jpg)
  
 **Main Components: **
 The main wiper motor is activated by a 2-relay system powered by a 12V 2A DC source with an optional step-down buck converter to regulate speed and torque,  while the Arduino and servo motor can be powered by a standard 5v phone charger. Preferably, the servo motor should have its own power supply so that it does not sag the current on the arduino. 
@@ -16,15 +16,17 @@ The mechanism is controlled by 3 toggle buttons: Button 1 raise the top lid. But
 The rotating arm tells its position by two IR sensors: bottom IR sensor for homing position, and a top IR sensor for when the arm reaches to about 90 degree zenith of rotation. On initial start up, the system will detect if the arm is resting at home position to allow inputs, if not, the system will enter a float warming state and a manual reset is required to bring the armature back to homing position. 
 Due to the design, the servo motor casing cannot allow the armature to rotate freely the full 360 degree. For safety, a limit switch is placed in the path of the servo casing, and will stop all system movements if activated. In this case, a float state warning will also activate demanding manual reset. I've had a unfortunate test incident where my faulty code failed to activate the limit switch and the servo casing hit the wood block, as it was at the time running on a 12V 15A DC source, there was so much torque that the plastic servo casing got ripped right off the aluminum arm. 
 
-![Wiring Diagram:] (wiring_diagram.png)
+![Wiring Diagram:](wiring_diagram.png)
 
 **Relay and Motor Wiring: **
 2-relay H-Bridge: I used a 2-relay configuration from a 4-channel module, wiring the motor leads directly to the Common (COM) terminals. This design Electrical Interlock: Normally Closed (NC) pins connect to system Ground, and Normally Open (NO) pins tie to the positive DC motor supply line. This physical wiring layout makes it structurally impossible to create a direct short-circuit across the DC power supply, regardless of code errors. 
 
-![Relay wiring diagram:] (relay_diagram.PNG)
+![Relay wiring diagram:](relay_diagram.PNG)
 
 
 **Arduino Code Structure: **
+![Arduino code file:](Toilet_Lid_Operator_Aug11_Three_buttons.ino)
+
 The software is organized into three clean layers that split reading sensors, deciding what to do, and moving the motor. This prevents glitches and keeps the hardware safe. 
 1. Sensor & Button Inputs (Modular Functions): Functions like IR_Sensors(), Limit_Switch(), and the button controllers run continuously on every loop cycle. They read input data, and translate button presses into simple internal request flags. 
 2. Brain & Decision Engine (Switch-Case Structure):The core logic uses a clean switch-case state machine. It handles one step at a time (like HOME, LATCHING, or LIFTING) and  blocks out the other states. Instead of turning on pins directly, this section only updates internal state-flag variables to map out the desired direction. 
@@ -44,7 +46,7 @@ $ https://youtu.be/PDNIiLSTzG4?si=cXLuie5WhYatIrrd  $ 
 **Voltage Control and Current Protection **
 step-down buck converter with CV and CC control (optional): controls main arm movement speed by adjusting step-down voltage; Controls torque by adjusting current ceiling. 
 TVS diodes: soldered Transient Voltage suppression diodes across relay terminals for voltage spike protection on the motor side. 
-![Relay protection](relay protection.jpg)
+![Relay protection](relay_protection.jpg)
 
 **Upcoming bathroom Installation: **
 As this project has been successfully tested, the next step will be actual installation in the bathroom so that the system will be fully functional. Which will involve many more upcoming works: 
