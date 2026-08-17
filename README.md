@@ -34,7 +34,7 @@ Relay wiring diagram:
 **Arduino Code Structure:**
 
 Arduino code file:
-![Arduino code file:](Toilet_Lid_Operator_Aug11_Three_buttons.ino)
+![Arduino code file:](Arduino_code_Aug11.ino)
 
 The software is organized into three clean layers that split reading sensors, deciding what to do, and moving the motor. This prevents glitches and keeps the hardware safe. 
 1. Sensor & Button Inputs (Modular Functions): Functions like IR_Sensors(), Limit_Switch(), and the button controllers run continuously on every loop cycle. They read input data, and translate button presses into simple internal request flags. 
