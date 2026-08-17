@@ -2,7 +2,7 @@
 # Automatic_toilet_seat_operator
 A toggle-activated rotating armature system to raise up and close either the top or both toilet seats. The armature is driven by a car wiper motor and a servo, while the system runs on Arduino code with positional IR sensors. 
 
-Watch the load testing video on youtube: $ https://youtu.be/TG4GU5XdJvA?si=c8EunXvwlVA2-hOE $
+Watch the load testing video on youtube: https://youtu.be/TG4GU5XdJvA?si=c8EunXvwlVA2-hOE
 
 **Introduction:**
 
@@ -44,13 +44,13 @@ The software is organized into three clean layers that split reading sensors, de
 Code logic flowchart
 ![Code logic flowchart:](code_flowchart.png)
 
-Watch the armature testing video on youtube: $ https://youtu.be/BwDyFDnwye8?si=BkIoQYhQGPaKe0z8) $
+Watch the armature testing video on youtube: https://youtu.be/BwDyFDnwye8?si=BkIoQYhQGPaKe0z8
 
 **Additional Features:**
 
 While the IR sensors are sufficient to limit arm rotation, I added a redundancy rotation tracking system with a potentiometer and GT2 gear-belt set, where the main arm gear is coupled around the motor shaft, and the potentiometer gear sits on the potentiometer above. When the main arm rotates, the potentiometer will have a 1-1 ratio rotation, and the Arduino will pick up its analog reading (0-1023) and map on to the rotation angle. However this system is not very accurate and prone to gradual slippage, so I've not incorporated it into the main program. 
 the main reference for my Fusion design is as follows: 
-$ https://youtu.be/PDNIiLSTzG4?si=cXLuie5WhYatIrrd  $ 
+https://youtu.be/PDNIiLSTzG4?si=cXLuie5WhYatIrrd  
 
 3D printed potentiometer GT2 gear set:
 ![3D printed potentiometer GT2 gear set](gearset.png)
