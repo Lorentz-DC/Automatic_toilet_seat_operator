@@ -10,7 +10,7 @@ load testing video with explaination on youtube: https://youtu.be/TG4GU5XdJvA?si
 
 **Introduction:**
 
-As a guy living with my girlfriend and her cat, I really don't like touching the toilet lids every time I am asked to put the seats down. So I built a automatic toilet seat operator, featuring a set of rotating aluminum armature with a car wiper motor driving the main arm, and a servo motor bolted to the end of the main arm driving a smaller arm. 
+As a guy living with my girlfriend and our cat, I really don't like touching the toilet lids every time I am asked to put the seats down. So I built a automatic toilet seat operator, featuring a set of rotating aluminum armature with a car wiper motor driving the main arm, and a servo motor bolted to the end of the main arm driving a smaller arm. 
 
 The main idea of the design is that when activated, the armature will catch the bolts attached to the toilet lids, and lift up either the top lid or both of the lids, and then push the lids back down. When the main arm alone rotates in clockwise direction, it will only catch the bolt on the upper lid and lift it up; When the servo motor spins down the smaller arm, the main armature will be extended to reach and catch the front bolt of the bottom lid; Therefore, when the arm lifts, both of the lids will be lifted. To lower the seats, the armature simply rotates in reverse to push the lids over, after which they will fall back down themselves. 
 
