@@ -28,7 +28,7 @@ The mechanism is controlled by 3 toggle buttons: Button 1 raise the top lid. But
 The rotating arm tells its position by two IR sensors: bottom IR sensor for homing position, and a top IR sensor for when the arm reaches to about 90 degree zenith of rotation. On initial start up, the system will detect if the arm is resting at home position to allow inputs, if not, the system will enter a float warming state and a manual reset is required to bring the armature back to homing position. 
 There is also a rotation tracking system featuring a set gears with a timing belt coupled to the motor shaft and to a potentiometer, however, this is an optional redundancy system added for extra safety. 
 
-Due to the design, the servo motor casing cannot allow the armature to rotate freely the full 360 degree. For safety, a limit switch is placed in the path of the servo casing, and will stop all system movements if activated. In this case, a float state warning will also activate demanding manual reset. I've had a unfortunate test incident where my faulty code failed to activate the limit switch and the servo casing hit the wood block, as it was at the time running on a 12V 15A DC source, there was so much torque that the plastic servo casing got ripped right off the aluminum arm. 
+Due to the design, the servo motor casing cannot allow the armature to rotate freely the full 360 degree. For safety, a limit switch is placed in the path of the servo casing, and will stop all system movements if activated. In this case, a float state warning will also activate demanding manual reset. I've had an unfortunate test incident where my faulty code failed to activate the limit switch and the servo casing hit the wood block, as it was at the time running on a 12V 15A DC source, there was so much torque that the plastic servo casing got ripped right off the aluminum arm. 
 
 Wiring Diagram:
 ![Wiring Diagram:](wiring_diagram.png)
@@ -75,7 +75,7 @@ Code logic flowchart
 
 **Rotation tracking with potentiometer and 3D-printed GT2 sear set**
 
-While the IR sensors are sufficient to limit arm rotation, I added a redundancy rotation tracking system with a potentiometer and GT2 gear-belt set, where the main arm gear is coupled around the motor shaft, and the potentiometer gear sits on the potentiometer above. When the main arm rotates, the potentiometer will have a 1-1 ratio rotation, and the Arduino will pick up its analog reading (0-1023) and map on to the rotation angle. However this system is not very accurate and prone to gradual slippage, so I've not incorporated it into the main program. Nevertheless, as you could see in the arduino code, the tracking system is functional and will print out the real-time rotation data of the potentiometer on the monitor. 
+While the IR sensors are sufficient to limit arm rotation, I added a redundancy rotation tracking system with a potentiometer and GT2 gear-belt set, where the main arm gear is coupled around the motor shaft, and the potentiometer gear sits on the potentiometer above. When the main arm rotates, the potentiometer will have a 1-1 ratio rotation, and the Arduino will pick up its analog reading (0-1023) and map on to the rotation angle. However this system is not very accurate and prone to gradual slippage, so I've not incorporated it into the main program. Nevertheless, in the arduino code, the tracking function is there, and will print out the real-time rotation data of the potentiometer on the monitor. 
 
 the main reference for my Fusion design is as follows: 
 https://youtu.be/PDNIiLSTzG4?si=cXLuie5WhYatIrrd  
@@ -102,7 +102,7 @@ As this project has been successfully tested, the next step will be actual insta
 
 Upgrading push buttons; 
 
-Adding a touchless motion sensor relay switch to switch on and off the system upon entering and exiting the bathroom; 
+Adding a touchless motion sensor relay switch to power on and off the system upon entering and exiting the bathroom; 
 
 Environment-proofing, wiring and electrical safety; 
 
